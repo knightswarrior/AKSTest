@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tmlsssodevaks01-a688"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tmlsssodevaks01-a688"
+  template:
+    metadata:
+      labels:
+        app: "tmlsssodevaks01-a688"
+    spec:
+      containers:
+        - name: "tmlsssodevaks01-a688"
+          image: "tmlsssvdevcr01.azurecr.io/tmlsssodevaks01"
+          ports:
+          - containerPort: 80
