@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tmlsapidevaks01-a066"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tmlsapidevaks01-a066"
+  template:
+    metadata:
+      labels:
+        app: "tmlsapidevaks01-a066"
+    spec:
+      containers:
+        - name: "tmlsapidevaks01-a066"
+          image: "tmlsssvdevcr01.azurecr.io/tmlsapidevaks01"
+          ports:
+          - containerPort: 80
